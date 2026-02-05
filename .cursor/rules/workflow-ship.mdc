@@ -1,0 +1,36 @@
+---
+description: "Trigger: @ship - 出荷前の最終全チェック（Test, Review, Sec, Perf, QA）"
+globs: []
+alwaysApply: false
+---
+
+# 出荷パイプライン (The Ship Gate)
+
+**Current Phase: Stable**
+適用ルール: `003-audit.mdc`
+
+## 1. ゲート0: The Gatekeeper (Security Audit)
+`@audit` 相当の厳格監査を実行。
+厳格監査を通過していない変更は、テストすらさせない。
+「監査レポートで Critical な指摘が0件であること」を確認する。
+
+## 2. ゲート1: 機能動作 (Test)
+```bash
+npm test
+```
+失敗したら即終了。
+
+## 3. ゲート2: コード品質 (Review)
+ルール違反、命名規則違反がないか。
+
+## 4. ゲート3: セキュリティ & 法務 (Sec)
+`@sec` 相当のチェック (RLS, Vulnerabilities, License, PII)。
+
+## 5. ゲート4: パフォーマンス & 運用 (Perf)
+`@perf` 相当のチェック (Bundle Size, Cost, Complexity)。
+
+## 6. ゲート5: UX & データ整合性 (QA)
+`@qa` 相当のチェック (A11y, SEO, Migration)。
+
+## 7. 完了判断
+全てクリアした場合のみ、「**SHIP IT! (出荷可能)**」と宣言する。

@@ -1,0 +1,32 @@
+---
+description: "Trigger: @init - プロジェクトの初期セットアップ（GEMINI.md作成）"
+globs: []
+alwaysApply: false
+---
+
+# プロジェクト初期化フロー
+
+## 1. プロジェクトの知識ベース `GEMINI.md` の作成
+技術スタックやDB設計を書くための雛形を作成します。
+
+```markdown
+# Project Name
+
+## Tech Stack
+- Frontend:
+- Backend:
+- Database:
+
+## Database Schema
+
+## Business Rules
+```
+
+## 2. ドキュメント用ディレクトリの作成
+`docs/` ディレクトリを作成し、仕様書などを格納する場所を準備します。
+
+## 3. Linter/Formatterのセットアップ提案
+「開発効率向上のため、Linter (ESLint/Prettierなど) を導入しますか？技術スタックに合わせて設定を行えます。」と確認する。
+
+## 4. ユーザーへの確認
+「GEMINI.md を作成しました。このプロジェクトで使用する技術スタック（言語・FW）を記述してください。」と伝える。

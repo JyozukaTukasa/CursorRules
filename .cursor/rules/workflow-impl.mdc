@@ -1,0 +1,42 @@
+---
+description: "Trigger: @impl - 機能実装（タスク分解〜コーディング）"
+globs: []
+alwaysApply: false
+---
+
+# 実装フェーズ (Focus Implementation)
+
+**Current Phase: Execution**
+適用ルール: `002-coding.mdc`
+
+## 1. 設計の存在確認 (Safety Lock)
+`docs/` 配下に設計ドキュメントが存在するか確認する。
+存在しない場合は「先に `@design` を実行してください」と警告して終了する。
+
+## 2. セキュリティ実装確認 (RLS Check)
+- DB操作を含む場合、**「RLSポリシー」** が設計されているか確認する。
+- なければ即座に停止し、設計に戻るか、その場でRLSを定義する。
+- 「アプリ層でのチェックがあるからOK」は **不可** とする。
+
+## 3. アトミック・タスク分解 & 脅威分析 (Threat Modeling)
+今回の実装を「1つのファイル」または「1つの関数」単位まで細かく分解し、**攻撃者の視点** でリスクを洗い出す。
+
+### タスク定義フォーマット (`current_task.md`):
+```markdown
+# Implementation Task
+
+## 🛡️ Security Risk & Mitigation
+- **Attack Vector**: (e.g. SQL Injection, XSS, IDOR)
+- **Mitigation**: (e.g. Use param queries, Sanitize, RLS)
+
+## 📝 Todo
+- [ ] タスク1
+- [ ] タスク2
+```
+
+## 4. 実装実行
+`current_task.md` の「防御策(Mitigation)」を確実に実装すること。
+
+## 5. 完了報告
+タスク完了後、`current_task.md` を削除し、
+「実装完了。次は `@test` へ。」と報告する。

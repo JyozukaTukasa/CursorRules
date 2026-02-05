@@ -1,0 +1,32 @@
+---
+description: "Trigger: @design - 基本設計・詳細設計（実装前の青写真作成）"
+globs: []
+alwaysApply: false
+---
+
+# 設計フェーズ (Assisted Design)
+
+**Current Phase: Planning**
+適用ルール: `001-planning.mdc`
+
+## 1. 前提チェック (Pre-flight Check)
+- `docs/requirements.md` が存在するか？ 無ければ `@spec` を促して終了。
+- `GEMINI.md` の技術選定は済んでいるか？
+
+## 2. テンプレート展開
+以下のファイルが存在しない場合、`.cursor/templates/` からコピーして作成します：
+- `docs/architecture.md` - システムアーキテクチャ
+- `docs/schema.md` - データベース設計
+- `docs/api.md` - API設計
+
+## 3. ヒアリング & 提案モード
+「要件定義書を元に、基本設計（DB・API・アーキテクチャ）を作成します。」
+
+### 成果物：
+- `docs/schema.md`: データベース設計
+- `docs/api.md`: API設計
+- **[推奨] 可視化**: 複雑なロジックやリレーションがある場合は、必ず `mermaid` 記法で図示し、認知負荷を下げること。
+- **[必須] ディレクトリ構成図**: `docs/architecture.md` に、これから作る「機能ごとのディレクトリ構成 (Tree)」を必ず定義すること。
+
+## 4. レビュー依頼
+「設計が固まりましたか？ 問題なければ `@impl` で実装に進んでください。」
