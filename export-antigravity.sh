@@ -34,8 +34,8 @@ if [ -f "GEMINI.md" ]; then
 fi
 
 # READMEをコピー
-if [ -f "ANTIGRAVITY_README.md" ]; then
-    cp ANTIGRAVITY_README.md "$TEMP_DIR/README.md"
+if [ -f "README.md" ]; then
+    cp README.md "$TEMP_DIR/README.md"
 fi
 
 echo "[4/4] Creating zip archive..."

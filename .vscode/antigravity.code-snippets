@@ -1,0 +1,90 @@
+{
+  // Antigravity Workflow Commands
+  // エディタ内で使用可能（チャット欄では動作しない可能性あり）
+  
+  "@help": {
+    "prefix": ["@help", "ahelp"],
+    "body": "@help",
+    "description": "困ったときのコンシェルジュ"
+  },
+  "@init": {
+    "prefix": ["@init", "ainit"],
+    "body": "@init",
+    "description": "プロジェクト初期化"
+  },
+  "@onboard": {
+    "prefix": ["@onboard", "aonboard"],
+    "body": "@onboard",
+    "description": "プロジェクト再開時の状況把握"
+  },
+  "@spec": {
+    "prefix": ["@spec", "aspec"],
+    "body": "@spec",
+    "description": "要件定義サポート"
+  },
+  "@design": {
+    "prefix": ["@design", "adesign"],
+    "body": "@design",
+    "description": "基本設計・詳細設計"
+  },
+  "@impl": {
+    "prefix": ["@impl", "aimpl"],
+    "body": "@impl",
+    "description": "機能実装（タスク分解〜コーディング）"
+  },
+  "@test": {
+    "prefix": ["@test", "atest"],
+    "body": "@test",
+    "description": "テスト実行・自動修正"
+  },
+  "@review": {
+    "prefix": ["@review", "areview"],
+    "body": "@review",
+    "description": "コードレビュー（自動修正付き）"
+  },
+  "@refactor": {
+    "prefix": ["@refactor", "arefactor"],
+    "body": "@refactor",
+    "description": "安全なリファクタリング"
+  },
+  "@audit": {
+    "prefix": ["@audit", "aaudit"],
+    "body": "@audit",
+    "description": "厳格セキュリティ監査"
+  },
+  "@sec": {
+    "prefix": ["@sec", "asec"],
+    "body": "@sec",
+    "description": "セキュリティ＆コンプライアンス監査"
+  },
+  "@perf": {
+    "prefix": ["@perf", "aperf"],
+    "body": "@perf",
+    "description": "パフォーマンス＆運用監査"
+  },
+  "@qa": {
+    "prefix": ["@qa", "aqa"],
+    "body": "@qa",
+    "description": "UX・SEO・データ整合性監査"
+  },
+  "@ship": {
+    "prefix": ["@ship", "aship"],
+    "body": "@ship",
+    "description": "出荷前の最終全チェック"
+  },
+  "@consult": {
+    "prefix": ["@consult", "aconsult"],
+    "body": "@consult",
+    "description": "AIによる改善提案"
+  },
+  "@sync": {
+    "prefix": ["@sync", "async"],
+    "body": "@sync",
+    "description": "プロジェクト整合性チェック"
+  },
+  "@wrap-up": {
+    "prefix": ["@wrap-up", "awrapup"],
+    "body": "@wrap-up",
+    "description": "セッション終了・状態保存"
+  }
+}

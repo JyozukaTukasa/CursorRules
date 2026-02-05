@@ -35,8 +35,8 @@ if (Test-Path "GEMINI.md") {
 }
 
 # READMEをコピー
-if (Test-Path "ANTIGRAVITY_README.md") {
-    Copy-Item "ANTIGRAVITY_README.md" "$tempDir\README.md"
+if (Test-Path "README.md") {
+    Copy-Item "README.md" "$tempDir\README.md"
 }
 
 Write-Host "[4/4] Creating zip archive..." -ForegroundColor Yellow
