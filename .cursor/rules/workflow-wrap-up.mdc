@@ -1,5 +1,5 @@
 ---
-description: "Trigger: @wrap-up - セッション終了・状態保存"
+description: "Trigger: @wrap-up - セッション終了・状態保存（Checkpoint作成）"
 globs: []
 alwaysApply: false
 ---
@@ -8,18 +8,47 @@ alwaysApply: false
 
 現在の作業状態を記録し、安心してチャットをリセットできる状態を作ります。
 
-## 1. 状態の保存 (Save State)
-現在の作業タスク (`task.md`) の内容を確認し、未完了のものがあれば記録します。
+## 1. 状態の保存 (Context Checkpointing)
+次回起動時(`@onboard`)のトークン節約のため、**「未来の自分への引き継ぎ書」** を作成します。
 
-## 2. 完了メッセージ (Completion)
+### Checkpoint作成
+以下の内容を `memory/checkpoint.md` に保存してください。
+
+```markdown
+# Checkpoint
+- **Date**: (現在日時)
+- **Phase**: (例: Implementation, Testing, Stable)
+- **Active Task**: (例: ユーザー認証機能の実装)
+- **Next Step**: (例: 統合テストの作成)
+- **Security Profile**: (例: L2 Standard)
+- **Notes**: (その他の引き継ぎ事項)
+```
+
+### 実行コマンド
+```bash
+mkdir -p memory
+```
+
+## 2. Task保存
+現在のタスクリスト (`task.md`) の内容を確認し、未完了のものがあれば記録します。
+
+## 3. 完了メッセージ (Completion)
 ユーザーに対して以下のメッセージを表示して終了してください。
 
 ---
 
 **✅ Session Wrapped Up**
 
-現在の作業状況を保存しました。
-コンテキストをクリアにするため、このチャットをアーカイブし、新しいチャットを開始してください。
+現在の作業状況を `memory/checkpoint.md` に保存しました。
+
+| 項目 | 内容 |
+|------|------|
+| Phase | (現在のフェーズ) |
+| Task | (現在のタスク) |
+| Next | (次のステップ) |
+| Security | (Security Profile) |
+
+コンテキストをクリアにするため、このチャットをアーカイブし、**新しいチャットを開始**してください。
 
 次のチャットでは、再開用コマンド `@onboard` を実行してください。
 

@@ -1,0 +1,70 @@
+---
+description: "Antigravity Defense Rules - 10層防御の詳細定義（Security Profile別適用範囲）"
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Antigravity Rules: DEFENSE (10 Layers)
+
+## 0. 適用範囲の制限 (Scope Limitation)
+> **重要**: 本ルールは「汎用的なWeb/App開発」を対象とします。
+> **銀行システム**等の高度な金融ドメインを開発する場合、本ルールだけでは**不十分**です。
+> 金融案件では、別途「Layer 11: Financial Domain Policy (FISC/HSM/AML準拠)」の追加定義を必須とします。
+
+## 1. Security Profiles
+`CURSOR.md` の Security Profile に応じて、適用するレイヤーが変わります。
+詳細は `000-core.mdc` の Security Profiles 表を参照。
+
+## 2. The 10 Layers of Defense (Defense in Depth)
+
+### Layer 1: AI Governance (Meta) [All]
+- **MUST NOT** generate code that bypasses user confirmation for destructive actions.
+- **MUST** detect and optimize self-hallucinations (e.g., inventing non-existent APIs).
+
+### Layer 2: Secure Architecture (Design) [L2+]
+- **MUST** adopt Zero Trust Architecture (Never trust internal network).
+- **MUST** perform Threat Modeling (STRIDE) for every new feature.
+
+### Layer 3: Static Application Security (SAST) [All]
+- **MUST NOT** hardcode Secrets (API Keys, Passwords) in source code.
+- **MUST** use Parameterized Queries to prevent SQL Injection.
+- **MUST** validate all inputs (Sanitization).
+
+### Layer 4: Supply Chain Security (SCA) [L2+]
+- **MUST** run `npm audit` (or equivalent) before shipping.
+- **MUST** check license compatibility (avoid GPL contamination if closed source).
+
+### Layer 5: Identity & Access Management (IAM) [All]
+- **MUST** implement Row Level Security (RLS) or equivalent at Database layer.
+- **MUST NOT** rely solely on application-logic permission checks.
+
+### Layer 6: Data Protection & Privacy [All]
+- **MUST** treat User Data as Toxic. Minimize collection.
+- **MUST** mask PII (Personally Identifiable Information) in logs.
+
+### Layer 7: Network & Infrastructure [L2+]
+- **MUST** configure CORS strict whitelist.
+- **MUST** implement Rate Limiting for public APIs.
+
+### Layer 8: Business Logic & Integrity [L2+]
+- **MUST** write Unit Tests for all business logic.
+- **MUST** verify edge cases (null, negative numbers, overflow).
+
+### Layer 9: Resilience & Reliability (SRE) [L3+]
+- **MUST** implement structured logging for Observability.
+- **MUST** design for failure (Retries, Circuit Breakers).
+
+### Layer 10: Governance, Risk, & Compliance (GRC) [L3+]
+- **MUST** maintain Audit Logs for all critical operations.
+- **MUST** ensure GDPR/CCPA compliance capability (Data Export/Deletion).
+
+## 3. Sovereign Requirements (Level 4 Specific)
+- **MUST** operate in Air-Gapped environment (No Internet).
+- **MUST NOT** use `npm install` or binary dependencies. Source build only.
+- **MUST** verify Personnel Clearance for all contributors.
+
+## 4. Limitations & Mitigations
+- **Human Error**: Cannot prevent internal fraud completely.
+  → **Mitigation**: 4-Eyes Principle (Approval Flow).
+- **Zero-Day**: Cannot prevent unknown exploits.
+  → **Mitigation**: Rapid Incident Response (Playbook).

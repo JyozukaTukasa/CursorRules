@@ -37,6 +37,9 @@ alwaysApply: false
 ## 4. 実装実行
 `current_task.md` の「防御策(Mitigation)」を確実に実装すること。
 
-## 5. 完了報告
-タスク完了後、`current_task.md` を削除し、
-「実装完了。次は `@test` へ。」と報告する。
+## 5. 完了報告 & テスト (Auto-Test)
+// turbo
+タスク完了後:
+1. `current_task.md` を削除
+2. テストを実行: `npm test`
+3. 「実装完了。テストも通過しました。次は `@ship` へ。」と報告する。

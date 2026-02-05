@@ -6,17 +6,23 @@ alwaysApply: false
 
 # テストフェーズ (Turbo Test)
 
+// turbo
+
 **Current Phase: Execution**
 適用ルール: `002-coding.mdc`
 
-## 1. 既存テストの実行
+## 1. Smart Testing (Diff-Based)
+変更点から「影響を受けるテスト」のみを特定して実行する。
+
 ```bash
-npm test
+git diff --name-only main...HEAD
 ```
+
+- **変更が少なければ**: `npm test -- --related $(git diff --name-only main...HEAD)`
+- **変更が広範囲/特定不能なら**: `npm test` (Full Fallback)
 
 ## 2. テスト自動作成 (Auto-Gen)
 テストファイルが見つからない、またはカバレッジが著しく低い場合、**ユーザーの許可を得ずに** 最低限のテストケース（正常系・異常系）を新規作成する。
-（いちいち許可を取る時間を節約するため）
 
 ## 3. 自動修正トライアル
 エラー内容が単純（Importミス、型定義ミスなど）な場合は、即座に修正して再実行する。

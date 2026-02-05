@@ -6,6 +6,8 @@ alwaysApply: false
 
 # 出荷パイプライン (The Ship Gate)
 
+// turbo
+
 **Current Phase: Stable**
 適用ルール: `003-audit.mdc`
 
@@ -14,7 +16,10 @@ alwaysApply: false
 厳格監査を通過していない変更は、テストすらさせない。
 「監査レポートで Critical な指摘が0件であること」を確認する。
 
-## 2. ゲート1: 機能動作 (Test)
+## 2. ゲート1: Full Regression Test
+> **重要**: ここでは **Smart Testing (高速化) は禁止** です。
+> どんなに些細な変更でも、必ず全テストスイートを実行してください。
+
 ```bash
 npm test
 ```

@@ -6,6 +6,8 @@ alwaysApply: false
 
 # レビューフェーズ (Auto-Fix & Smart Diff)
 
+// turbo
+
 **Current Phase: Execution**
 適用ルール: `002-coding.mdc`
 

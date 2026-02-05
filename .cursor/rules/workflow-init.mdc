@@ -1,5 +1,5 @@
 ---
-description: "Trigger: @init - プロジェクトの初期セットアップ（CURSOR.md作成）"
+description: "Trigger: @init - プロジェクトの初期セットアップ（CURSOR.md作成、Security Profile設定）"
 globs: []
 alwaysApply: false
 ---
@@ -18,13 +18,22 @@ alwaysApply: false
 - ディレクトリ構成
 - ビジネスルール
 - セキュリティコンテキスト
+- Security Profile (L1-L4)
 - 現在のフェーズ（Planning/Design/Execution/Stable）
 
 ## 2. ドキュメント用ディレクトリの作成
 `docs/` ディレクトリを作成し、仕様書などを格納する場所を準備します。
 
-## 3. Linter/Formatterのセットアップ提案
+## 3. Security Profile Selection (重要)
+「プロジェクトのセキュリティ要件を選択してください（L1〜L4）」と提示し、回答に基づいて `CURSOR.md` に記録する。
+レベル詳細は `000-core.mdc` の Security Profiles 表を参照。
+
+デフォルトは **L2 (Standard)** を設定します。
+
+## 4. Linter/Formatterのセットアップ提案
 「開発効率向上のため、Linter (ESLint/Prettierなど) を導入しますか？技術スタックに合わせて設定を行えます。」と確認する。
 
-## 4. ユーザーへの確認
-「CURSOR.md を作成しました。このプロジェクトで使用する技術スタック（言語・FW）を記述してください。」と伝える。
+## 5. ユーザーへの確認
+「CURSOR.md を作成し、Security Profile を **L2 (Standard)** に設定しました。
+このプロジェクトで使用する技術スタック（言語・FW）を記述してください。
+Security Profileを変更する場合は、CURSOR.mdの該当セクションを編集してください。」と伝える。

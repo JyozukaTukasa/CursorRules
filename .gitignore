@@ -1,0 +1,32 @@
+# Cursor Rules 配布用 .gitignore
+
+# 開発用ソースファイル（配布不要）
+Antigravity/
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# エディタ設定（ユーザー固有）
+*.swp
+*.swo
+*~
+
+# Node.js（テスト等で使用する場合）
+node_modules/
+npm-debug.log*
+
+# 環境変数（秘密情報）
+.env
+.env.local
+.env.*.local
+
+# ログ
+*.log
+logs/
+
+# 一時ファイル
+*.tmp
+*.temp
+.cache/

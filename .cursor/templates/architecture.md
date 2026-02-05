@@ -1,10 +1,6 @@
 # システムアーキテクチャ (System Architecture)
 
 ## 1. 全体構成図 (Context Diagram)
-<!--
-システムとその外部システム（ユーザー、外部APIなど）との関係を図示する。
-AIに「概要を伝えたのでMermaidで描いて」と依頼すると良い。
--->
 ```mermaid
 graph TD
     User[ユーザー] --> WebApp[Webアプリ]
@@ -19,9 +15,6 @@ graph TD
 - **DevTools**: (Linter, TestFW etc.)
 
 ## 3. ディレクトリ構成 (Directory Structure)
-<!--
-これから作成するリポジトリの主要なフォルダ構成案。
--->
 ```
 src/
   ├── components/

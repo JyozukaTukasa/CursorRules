@@ -1,9 +1,6 @@
 # データベース設計 (Schema Design)
 
 ## 1. ER図 (Entity Relationship)
-<!--
-テーブル間のリレーションシップを図示する。
--->
 ```mermaid
 erDiagram
     USER ||--o{ POST : has
@@ -30,7 +27,8 @@ erDiagram
 - ...
 
 ## 3. セキュリティ設計 (Security - RLS via Database)
-<!-- アプリ層ではなく、DB層で強制するセキュリティポリシーを定義する -->
+> **重要**: アプリ層ではなく、**DB層で強制**するセキュリティポリシーを定義する。
+
 ### User Table
 - **Policy**: `auth.uid() == id` (自分自身のデータのみ参照・更新可能)
 - **Role**: Authenticated users only

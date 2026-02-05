@@ -6,6 +6,8 @@ alwaysApply: false
 
 # 安全なリファクタリング (Safe Refactoring)
 
+// turbo
+
 **Current Phase: Execution**
 適用ルール: `002-coding.mdc`
 
