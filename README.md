@@ -8,9 +8,9 @@ Cursorエディタを **「自律型AIエージェント」** に進化させる
 
 ## ダウンロード
 
-**👇 クリックして即ダウンロード**
+**👇 クリックして即ダウンロード（v2.0.0）**
 
-[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge&logo=github)](https://github.com/JyozukaTukasa/CursorRules/archive/refs/heads/main.zip)
+[![Download ZIP](https://img.shields.io/badge/Download-v2.0.0-blue?style=for-the-badge&logo=github)](https://github.com/JyozukaTukasa/CursorRules/archive/refs/tags/v2.0.0.zip)
 
 または [Releases](https://github.com/JyozukaTukasa/CursorRules/releases) から最新版を取得
 
@@ -67,7 +67,7 @@ your-project/
 
 ```
 .cursor/
-├── rules/           # AIルール（21ファイル）
+├── rules/           # AIルール（23ファイル）
 └── templates/       # ドキュメント雛形（5ファイル）
 
 .cursorrules         # 古いCursor用
