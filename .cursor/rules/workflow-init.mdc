@@ -1,18 +1,18 @@
 ---
-description: "Trigger: @init - プロジェクトの初期セットアップ（GEMINI.md作成）"
+description: "Trigger: @init - プロジェクトの初期セットアップ（CURSOR.md作成）"
 globs: []
 alwaysApply: false
 ---
 
 # プロジェクト初期化フロー
 
-## 1. プロジェクトの知識ベース `GEMINI.md` の作成
-`GEMINI.md` が存在しない場合、`.cursor/templates/GEMINI.md` からコピーして作成します。
+## 1. プロジェクトの知識ベース `CURSOR.md` の作成
+`CURSOR.md` が存在しない場合、`.cursor/templates/CURSOR.md` からコピーして作成します。
 
 このファイルはAIがプロジェクトを理解するための「前提知識」です。
 新しいチャットを開始するたびに、AIはこのファイルを最初に読み込みます。
 
-### GEMINI.md に含まれる項目：
+### CURSOR.md に含まれる項目：
 - プロジェクト概要
 - 技術スタック
 - ディレクトリ構成
@@ -27,4 +27,4 @@ alwaysApply: false
 「開発効率向上のため、Linter (ESLint/Prettierなど) を導入しますか？技術スタックに合わせて設定を行えます。」と確認する。
 
 ## 4. ユーザーへの確認
-「GEMINI.md を作成しました。このプロジェクトで使用する技術スタック（言語・FW）を記述してください。」と伝える。
+「CURSOR.md を作成しました。このプロジェクトで使用する技術スタック（言語・FW）を記述してください。」と伝える。

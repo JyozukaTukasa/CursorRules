@@ -11,7 +11,7 @@ alwaysApply: false
 
 ## 1. 前提チェック (Pre-flight Check)
 - `docs/requirements.md` が存在するか？ 無ければ `@spec` を促して終了。
-- `GEMINI.md` の技術選定は済んでいるか？
+- `CURSOR.md` の技術選定は済んでいるか？
 
 ## 2. テンプレート展開
 以下のファイルが存在しない場合、`.cursor/templates/` からコピーして作成します：

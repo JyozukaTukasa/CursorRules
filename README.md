@@ -35,15 +35,15 @@ your-project/          ← あなたのプロジェクト
 │   ├── rules/
 │   └── templates/
 ├── .cursorrules       ← これもコピー！（古いCursor用）
-├── GEMINI.md          ← @init で作成、または templates/ からコピー
+├── CURSOR.md          ← @init で作成、または templates/ からコピー
 ├── src/
 └── ...
 ```
 
-### ステップ3: GEMINI.md の作成
-チャットで `@init` と入力するか、`.cursor/templates/GEMINI.md` をプロジェクトルートにコピーして編集。
+### ステップ3: CURSOR.md の作成
+チャットで `@init` と入力するか、`.cursor/templates/CURSOR.md` をプロジェクトルートにコピーして編集。
 
-**GEMINI.md はAIの「前提知識」です。** 技術スタック、ビジネスルール、セキュリティ設定を書いておくと、AIが毎回読み込んで理解してくれます。
+**CURSOR.md はAIの「前提知識」です。** 技術スタック、ビジネスルール、セキュリティ設定を書いておくと、AIが毎回読み込んで理解してくれます。
 
 ### ステップ4: 再起動
 Cursorを **完全に閉じて、もう一度開く**。

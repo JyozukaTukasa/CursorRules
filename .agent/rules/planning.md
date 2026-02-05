@@ -1,9 +1,3 @@
----
-description: "Antigravity Planning Rules - 計画・設計フェーズのルール"
-globs: ["**/*"]
-alwaysApply: true
----
-
 # Antigravity Rules: PLANNING
 
 ## 1. Phase Logic: Planning
@@ -16,4 +10,4 @@ alwaysApply: true
 - **ドキュメント**: NotionやExcelではなく、リポジトリ内の Markdown (.md) で完結させる。
 
 ## 3. 知識のメンテナンス
-- **CURSOR.md更新**: 仕様変更、アーキテクチャ決定事項は必ず `CURSOR.md` に追記する。
+- **GEMINI.md更新**: 仕様変更、アーキテクチャ決定事項は必ず `GEMINI.md` に追記する。

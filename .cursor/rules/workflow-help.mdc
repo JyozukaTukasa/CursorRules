@@ -10,7 +10,7 @@ alwaysApply: false
 
 ## 1. 状況確認 (Context Check)
 まず、現在のフェーズを確認します。
-`GEMINI.md` から現在のフェーズ情報を読み込んでください。
+`CURSOR.md` から現在のフェーズ情報を読み込んでください。
 
 ## 2. ヒアリング (Intent Discovery)
 ユーザーの状況に近いものを番号で選んでもらいます。

@@ -10,7 +10,7 @@ alwaysApply: false
 現在のファイル構成をスキャンし、`docs/architecture.md` の記述と乖離がないかチェックする。
 
 ## 2. 技術スタックの同期
-`package.json` を読み込み、`GEMINI.md` の技術スタック一覧を最新化する。
+`package.json` を読み込み、`CURSOR.md` の技術スタック一覧を最新化する。
 
 ## 3. トレーサビリティ監査 (Traceability Check)
 「要件定義書 (`docs/requirements.md`) に紐付かない、謎のコード」が存在しないかチェックする。
