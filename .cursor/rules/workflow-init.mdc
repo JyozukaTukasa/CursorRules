@@ -7,20 +7,18 @@ alwaysApply: false
 # プロジェクト初期化フロー
 
 ## 1. プロジェクトの知識ベース `GEMINI.md` の作成
-技術スタックやDB設計を書くための雛形を作成します。
+`GEMINI.md` が存在しない場合、`.cursor/templates/GEMINI.md` からコピーして作成します。
 
-```markdown
-# Project Name
+このファイルはAIがプロジェクトを理解するための「前提知識」です。
+新しいチャットを開始するたびに、AIはこのファイルを最初に読み込みます。
 
-## Tech Stack
-- Frontend:
-- Backend:
-- Database:
-
-## Database Schema
-
-## Business Rules
-```
+### GEMINI.md に含まれる項目：
+- プロジェクト概要
+- 技術スタック
+- ディレクトリ構成
+- ビジネスルール
+- セキュリティコンテキスト
+- 現在のフェーズ（Planning/Design/Execution/Stable）
 
 ## 2. ドキュメント用ディレクトリの作成
 `docs/` ディレクトリを作成し、仕様書などを格納する場所を準備します。
